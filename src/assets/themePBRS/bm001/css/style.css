@@ -5080,9 +5080,17 @@ body{
   width: 100%;
 }
 
+
+
+
+
 /*---------------------------------------
     03.1.1 Sub Banner
 -----------------------------------------*/
+
+
+
+
 .subbanner-section .owl-item:nth-child(odd) .cms-desc {
   left: auto;
   right: 26%;
@@ -5157,10 +5165,19 @@ body{
   }
 }
 
+
+
+
+
 /*---------------------------------------
     03.2.0 service
 -----------------------------------------*/
 /*-- service cms --*/
+
+
+
+
+
 .shipping-outer {
   background-color: #f2f2f2;
   border-radius: 5px;

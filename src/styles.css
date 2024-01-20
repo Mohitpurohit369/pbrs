@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "/node_modules/ngx-owl-carousel-2/lib/styles/prebuilt-themes/owl.carousel.min.css";
-@import "/node_modules/ngx-owl-carousel-2/lib/styles/prebuilt-themes/owl.theme.default.min.css";
+/* @import "/node_modules/ngx-owl-carousel-2/lib/styles/prebuilt-themes/owl.carousel.min.css"; */
+/* @import "/node_modules/ngx-owl-carousel-2/lib/styles/prebuilt-themes/owl.theme.default.min.css"; */
 @import "/node_modules/bootstrap/dist/css/bootstrap.css";
  @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
-/*@import "/node_modules/@fortawesome/fontawesome-free/css/all.min.css"; */
+@import "/node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
 @import "./assets/themePBRS/bm001/css/font-awesome.min.css";
 @import "./assets/themePBRS/bm001/css/style.css";
@@ -14,11 +14,14 @@
 @import "./assets/themePBRS/bm001/css/meanmenu.css";
 @import "./assets/themePBRS/bm001/css/ionicons.min.css";
 @import "./assets/themePBRS/bm001/css/magnific-popup.css";
+@import "./assets/themePBRS/bm001/css/font-awesome.min.css";
+
 /* @import "./assets/themePBRS/bm001/css/rtl.css"; */
 @import "./assets/themePBRS/bm001/css/owl.carousel.css";
 @import "./assets/themePBRS/bm001/css/jquery-ui.css";
+/* "/node_modules/bootstrap/dist/js/bootstrap.min.js" */
+/* @import "../node_modules/bootstrap/dist/js/bootstrap.min.js"; */
 
-/* @import "./assets/themePBRS/bm001/js/custom.js"; */
 
 
 
