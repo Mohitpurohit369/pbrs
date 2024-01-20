@@ -1,0 +1,132 @@
+/*---------------------------------------
+    4 Footer
+-----------------------------------------*/
+.footer .footer-title, .footer .footer h4 {
+    color: #000;
+    font-size: 22px;
+    position: relative;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footer .footer-block ul {
+      display: none;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .footer .footer-block ul {
+      display: none;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .footer .footer-block ul li {
+    transition: 0.5s;
+    padding: 5px 0;
+  }
+  
+  .footer .footer-block ul li:hover {
+    list-style: disc;
+    margin-left: 10px;
+    color: #84c225;
+    transition: 0.5s;
+  }
+  
+  .footer .footer-block ul li a {
+    color: #4c4c4c;
+  }
+  
+  .footer .footer-block ul li a:hover {
+    color: #84c225;
+  }
+  
+  .footer .footer-block ul li.add:hover, .footer .footer-block ul li.phone:hover, .footer .footer-block ul li.email:hover {
+    list-style: none;
+    margin-left: 0px;
+    color: #808080;
+    transition: 0.5s;
+  }
+  .toggle_div {
+      width: 100%;
+      float: left;
+      position: absolute;
+      left: 0;
+  }
+  .footer .footer-block .toggle.active .toggle_div::before {
+    color: #000;
+    content: "\f055";
+    font-family: "FontAwesome";
+    font-size: 22px;
+    padding: 0;
+    float: right;
+  }
+  
+  .footer .footer-block .toggle .toggle_div::before {
+    color: #000;
+    content: "\f056";
+    font-family: "FontAwesome";
+    font-size: 22px;
+    padding: 0;
+    float: right;
+  }
+  
+  .footer .footer-bottom {
+    background: #FFFFFF;
+    color: #808080;
+  }
+  
+  .footer .footer-bottom .section_title {
+    border-bottom: none;
+  }
+  
+  .footer .footer-bottom .social_icon ul li {
+    display: inline-block;
+  }
+  
+  .footer .footer-bottom .social_icon ul li a {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: #808080;
+    display: block;
+    font-size: 20px;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+  }
+  
+  .footer .footer-bottom .social_icon ul li:hover i.fab, .footer .footer-bottom .social_icon ul li:hover i.fas {
+    color: #fff;
+  }
+  
+  .footer .footer-bottom .social_icon ul li:hover i.fa-facebook-f {
+    background-color: #3b5998;
+    border-color: #3b5998;
+  }
+  
+  .footer .footer-bottom .social_icon ul i.fab, .footer .footer-bottom .social_icon ul i.fas {
+    background-color: transparent;
+    font-size: 14px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+  }
+  
+  .footer .footer-bottom .app-icon li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .footer .footer-bottom .copyright-part {
+    border-top: 1px solid #ebebeb;
+  }
+  
+  .footer .footer-bottom .payment-icon li {
+    display: inline-block;
+    font-size: 36px;
+    color: #808080;
+    margin: 0 5px;
+  }
