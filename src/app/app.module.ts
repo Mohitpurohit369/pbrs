@@ -7,17 +7,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { HomeRoutingModule } from './component/home/home-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { CategoryRoutingModule } from './component/category/category-routing.module';
   
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeRoutingModule,
+    CategoryRoutingModule,
     SharedModule
   ],
   providers: [],

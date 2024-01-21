@@ -47,7 +47,7 @@ var mfp, // As we have only one instance of MagnificPopup object, we define it l
 	MagnificPopup = function(){},
 	_isJQ = !!(window.jQuery),
 	_prevStatus,
-	_window = $(window),
+	// _window = $(window),
 	_document,
 	_prevContentType,
 	_wrapClasses,
