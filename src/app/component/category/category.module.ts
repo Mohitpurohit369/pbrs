@@ -6,9 +6,13 @@ import { CategoryRoutingModule } from './category-routing.module';
 
 
 
+
+
 @NgModule({
   declarations: [
-    CategoryComponent
+    CategoryComponent,
+    // BabyFoodCerealsComponent,
+  
   ],
   imports: [
     CommonModule,

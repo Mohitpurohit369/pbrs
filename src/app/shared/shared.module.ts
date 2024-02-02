@@ -4,6 +4,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,8 +16,14 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  exports:[ContentLayoutComponent]
+  // exports:[ContentLayoutComponent]
 })
-export class SharedModule { }
+export class SharedModule {
+
+  constructor(){
+    console.log("ddgsdjhsjdhsjh")
+  }
+ }
