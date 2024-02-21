@@ -91,7 +91,7 @@
                             <!-- <label>Email</label> -->
                             <input
                             placeholder="Enter your Email"
-                              type="text"
+                              type="number"
                               formControlName="mob"
                               class="form-control mb-2"
                               [ngClass]="{ 'is-invalid': submitted && f['mob'].errors }"
@@ -174,7 +174,7 @@
                         </div> -->
 
 
-                        <div class="col-md-6 col-12 d-flex">
+                        <!-- <div class="col-md-6 col-12 d-flex">
                 
                           <div class="account-image">
                                 <h3>Upload your Image</h3>
@@ -183,7 +183,7 @@
                                 
                                 <div class="account-image-upload">
                                     <input type="file" name="chooseFile" id="account-image-upload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)">
-                                    <!-- <label class="account-image-label" for="account-image-upload">Choose your image</label> -->
+                                    
                                     <label for="imageUpload" *ngIf="editFile" [ngClass]="['custom-label', 'upload-image']"></label>
                                     <label *ngIf="removeUpload" [ngClass]="['custom-label', 'remove-image']" (click)="removeUploadedFile()"></label>
                                     <div class="avatar-preview">
@@ -196,7 +196,7 @@
                                 
                             </div>
                             
-                        </div>
+                        </div> -->
                     
                         <div class="form-group form-check">
                           <input
