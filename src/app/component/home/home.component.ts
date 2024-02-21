@@ -9,15 +9,13 @@ import { DataService } from 'src/app/shared/services/data.service';
 export class HomeComponent {
   userData :any
   constructor(private dataservice :DataService){
+
     this.dataservice.getproductdata().subscribe(res=>{
       this.userData=res;
-      console.log("main Banner",res)
+      console.log("main Banner1",res);
     })
 
 
-this.dataservice.getsubbanner().subscribe(ress=>{
-  console.log("sub Banner",ress)
-})
-    
+
   }
 }

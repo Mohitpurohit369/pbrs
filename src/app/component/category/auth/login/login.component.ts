@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from 'src/app/shared/services/data.service';
+import { Global } from 'src/app/shared/services/golbal';
 import Validation from 'src/app/shared/validitions/validate-password';
 
 @Component({
@@ -15,21 +17,13 @@ export class LoginComponent {
   editFile: boolean = true;
   removeUpload: boolean = false;
 
-  constructor(private formBuilder: FormBuilder,private cd: ChangeDetectorRef) {}
+  constructor(private formBuilder: FormBuilder,private cd: ChangeDetectorRef,private _dataService:DataService) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group(
       {
-        file: [null],
+        // file: [null],
         fullname: ['', Validators.required],
-        username: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(6),
-            Validators.maxLength(20)
-          ]
-        ],
         mob: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
         email: ['', [Validators.required, Validators.email]],
         password: [
@@ -53,15 +47,42 @@ export class LoginComponent {
     return this.form.controls;
   }
 
-  onSubmit(): void {
-    this.submitted = true;
+//   onSubmit(): void {
+//     this.submitted = true;
+//     // console.log("form data here",this.form.value)
+//     if (this.form.invalid) {
+//       console.log("form data here invalid",this.form.value);
+//       return;
+//     }
+// console.log("form data here",this.form.value);
+//     console.log(JSON.stringify(this.form.value, null, 2));
+//   }
 
-    if (this.form.invalid) {
-      return;
-    }
 
-    console.log(JSON.stringify(this.form.value, null, 2));
+
+register(formData: any) {
+  this.submitted = true;
+
+  if (this.form.invalid) {
+    alert("unsuc")
+    return;
   }
+
+  // this._dataService.post(Global.BASE_API_PATH + "sign-up", formData.value).subscribe(res => {
+  //   if (res.isSuccess) {
+      // this._toastr.success("Registration has been done !!", "Register");
+      // alert("sufff")
+      // this.form.reset();
+      // this.submitted = false;
+      // this.elname.select('logintab');
+    // } else {
+    //   alert("uunnsuchh")
+      // this._toastr.error(res.errors[0], "Register");
+    // }
+// })
+  
+
+}
 
   onReset(): void {
     this.submitted = false;

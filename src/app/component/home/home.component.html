@@ -3,10 +3,10 @@
 <div class="banner section">
   <div class="main-banner owl-carousel owl-loaded owl-drag">
     <div class="owl-stage-outer">
-      <div class="owl-stage" *ngFor="let data of userData.data"
+      <div class="owl-stage" *ngFor="let data of userData"
         style="transform: translate3d(-1263px, 0px, 0px); transition: all 0s ease 0s; width: 2527px;">
         <div class="owl-item" style="width: 1263.33px;">
-          <div class="item"><a href="#"><img src="" alt="Main Banner"
+          <div class="item"><a href="#"><img [src]="data" alt="Main Banner"
                 class="img-responsive"></a></div>
         </div>
         <div class="owl-item active" style="width: 1263.33px;">
