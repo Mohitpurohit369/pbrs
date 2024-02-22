@@ -10,6 +10,34 @@
       {
         "image": "../../../assets/image2/11686029329.jpg"
       }
+    ],
+    "categories":[
+      {
+        "id":1,
+        "heading":"Del Monte Beets",
+        "image": "../../../assets/image2/11645203608.jpg"
+      },
+      {
+        "id":2,
+        "heading":"Veggies",
+        "image": "../../../assets/image2/11686029329.jpg"
+      },
+      {
+        "id":3,
+        "heading":"soft Drinks",
+        "image": "../../../assets/image2/11686029329.jpg"
+      }
+      ,
+      {
+        "id":4,
+        "heading":"soft Drinks",
+        "image": "../../../assets/image2/11686029329.jpg"
+      },
+      {
+        "id":5,
+        "heading":"soft Drinks",
+        "image": "../../../assets/image2/11686029329.jpg"
+      }
     ]
   }
   ]
