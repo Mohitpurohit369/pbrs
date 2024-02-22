@@ -10,7 +10,8 @@ export class DataService {
   constructor(private http: HttpClient ) { }
 
   // apiUrl= 'http://sahosoftweb.com/api/Category/GetAll'
-  // apiUrl='https://pbrsmart.com/api/users/main-banner';
+  // apiUrl='https://pbrsmart.com/api/users/main-banner'; on karna hai
+  //apiUrl='https://pbrsmart.com/api/users/sing-up';//
   // subBanner='https://pbrsmart.com/api/users/main-category-products';
 
   apiUrl= '/assets/database.json';
