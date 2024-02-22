@@ -1,0 +1,16 @@
+{
+  "data": [{
+    "banner":[
+    {
+      "image": "../../../assets/database/11686029329.jpg"
+    }
+  ]
+    ,
+    "subBanner":[
+      {
+        "image": "../../../assets/image2/11686029329.jpg"
+      }
+    ]
+  }
+  ]
+}

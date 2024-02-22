@@ -68,18 +68,18 @@ register(formData: any) {
     return;
   }
 
-  // this._dataService.post(Global.BASE_API_PATH + "sign-up", formData.value).subscribe(res => {
-  //   if (res.isSuccess) {
+  this._dataService.post(Global.BASE_API_PATH + "sign-up", formData.value).subscribe(res => {
+    if (res.isSuccess) {
       // this._toastr.success("Registration has been done !!", "Register");
-      // alert("sufff")
-      // this.form.reset();
-      // this.submitted = false;
+      alert("sufff")
+      this.form.reset();
+      this.submitted = false;
       // this.elname.select('logintab');
-    // } else {
-    //   alert("uunnsuchh")
+    } else {
+      alert("uunnsuchh")
       // this._toastr.error(res.errors[0], "Register");
-    // }
-// })
+    }
+})
   
 
 }

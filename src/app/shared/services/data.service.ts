@@ -14,7 +14,7 @@ export class DataService {
   //apiUrl='https://pbrsmart.com/api/users/sing-up';//
   // subBanner='https://pbrsmart.com/api/users/main-category-products';
 
-  apiUrl= '/assets/database.json';
+  apiUrl= '/assets/home_banner.json';
  
   getproductdata(){
     return this. http.get<any[]>(this.apiUrl);
@@ -24,15 +24,15 @@ export class DataService {
   //   return this. http.get<any[]>(this.subBanner);
 
   // }
-  // post(url: string, model: any): Observable<any> {
-  //     const body = JSON.stringify(model);
+  post(url: string, model: any): Observable<any> {
+      const body = JSON.stringify(model);
   
-  //     let httpHeaders = new HttpHeaders()
-  //       .set('Content-Type', 'application/json')
+      let httpHeaders = new HttpHeaders()
+        .set('Content-Type', 'application/json')
   
-  //     return this.http.post(url, body, {
-  //       headers: httpHeaders
-  //     });
-  //   }
+      return this.http.post(url, body, {
+        headers: httpHeaders
+      });
+    }
   
 }
