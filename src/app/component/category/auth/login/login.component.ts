@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 import { DataService } from 'src/app/shared/services/data.service';
 import { Global } from 'src/app/shared/services/golbal';
 import Validation from 'src/app/shared/validitions/validate-password';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,14 +17,19 @@ export class LoginComponent {
   submitted = false;
   editFile: boolean = true;
   removeUpload: boolean = false;
-
-  constructor(private formBuilder: FormBuilder,private cd: ChangeDetectorRef,private _dataService:DataService) {}
+  loginForm:FormGroup;
+  strMsg: string;
+  constructor(private formBuilder: FormBuilder,private cd: ChangeDetectorRef,private _dataService:DataService,
+    private _authgService:AuthService ) {
+      this.strMsg = "";
+    }
 
   ngOnInit(): void {
+    this.createLoginForm();
     this.form = this.formBuilder.group(
       {
         // file: [null],
-        fullname: ['', Validators.required],
+        name: ['', Validators.required],
         mob: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
         email: ['', [Validators.required, Validators.email]],
         password: [
@@ -35,7 +41,7 @@ export class LoginComponent {
           ]
         ],
         confirmPassword: ['', Validators.required],
-        acceptTerms: [false, Validators.requiredTrue]
+        // acceptTerms: [false, Validators.requiredTrue]
       },
       {
         validators: [Validation.match('password', 'confirmPassword')]
@@ -47,29 +53,59 @@ export class LoginComponent {
     return this.form.controls;
   }
 
-//   onSubmit(): void {
-//     this.submitted = true;
-//     // console.log("form data here",this.form.value)
-//     if (this.form.invalid) {
-//       console.log("form data here invalid",this.form.value);
-//       return;
-//     }
-// console.log("form data here",this.form.value);
-//     console.log(JSON.stringify(this.form.value, null, 2));
-//   }
+  createLoginForm() {
+    this.loginForm = this.formBuilder.group({
+      userName: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
+  login() {
+    debugger;
+    if (this.loginForm.get('userName').value == "") {
+      // this._toastr.error("UserName is required !!", "Login");
+    } else if (this.loginForm.get('password').value == "") {
+      // this._toastr.error("Password is required !!", "Login");
+    } else {
+      if (this.loginForm.valid) {
+        this._dataService.post(Global.BASE_API_PATH + "/login", this.loginForm.value).subscribe(res => {
+          if (res) {
+            this._authgService.login(res);
+  
+            this.strMsg = this._authgService.getMessage();
+            if (this.strMsg !== "") {
+              // this._toastr.error(this.strMsg, "Login");
+              this.onReset();
+            }
+          } else {
+            // this._toastr.error(res.errors[0], "Login");
+            this.onReset();
+          }
+        });
+      } else {
+        // this._toastr.error("Invalid Crendiantial!!", "Login");
+        this.onReset();
+      }
+    }
+  
+   }
 
 
 
 register(formData: any) {
   this.submitted = true;
+  // const postData = { ...formData.value };
+
+  //   delete postData.confirmPassword;
+  //   delete postData.password;
+console.log("form",formData)
 
   if (this.form.invalid) {
     alert("unsuc")
     return;
   }
 
-  this._dataService.post(Global.BASE_API_PATH + "sign-up", formData.value).subscribe(res => {
-    if (res.isSuccess) {
+  this._dataService.post(Global.BASE_API_PATH + "/register", formData.value).subscribe(res => {
+    if (res) {
       // this._toastr.success("Registration has been done !!", "Register");
       alert("sufff")
       this.form.reset();
@@ -128,4 +164,7 @@ register(formData: any) {
        file: [null]
      });
    }
+
+
+   
 }

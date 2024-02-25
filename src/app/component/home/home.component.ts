@@ -14,6 +14,10 @@ export class HomeComponent {
       this.userData=res.data;
       console.log("main Banner1",res.data[0].banner);
     })
+    this.dataservice.getproductdata().subscribe((res:any)=>{
+      this.userData=res.data;
+      console.log("main Banner1",res.data[0].banner);
+    })
 
 
 

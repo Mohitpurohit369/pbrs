@@ -152,9 +152,9 @@
       <div class="product-layout col-lg-2 col-md-3 col-sm-4 col-6" *ngFor="let data of userData[0].categories">
         <div class="product-thumb transition text-center">
           <div class="caption categoryname">
-            <h4><a href="#">{{data.heading}}</a></h4>
+            <h4><a routerLink="/category/products/{{data.id}}" >{{data.heading}}</a></h4>
           </div>
-          <div class="image" routerLink="/category  "><img src="{{data.image}}"
+          <div class="image" routerLink="/category/products  "><img src="{{data.image}}"
               alt="Del Monte Beets" title="Del Monte Beets" class="img-responsive"></div>
         </div>
       </div>

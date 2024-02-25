@@ -36,7 +36,7 @@ export class AuthService {
       this.message = "";
       this.loggedIn.next(true);
       this.currentUserSubject.next(objUserDetails);
-      this.router.navigate(['/dashboard/default']);
+      this.router.navigate(['/home']);
     }
   }
 
@@ -49,4 +49,5 @@ export class AuthService {
   getMessage(): string {
     return this.message;
   }
+
 }

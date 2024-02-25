@@ -13,8 +13,9 @@ export class BabyFoodComponent {
   constructor(private route: ActivatedRoute, private productService: DataService) { }
 
   ngOnInit(): void {
-    // this.productId = +this.route.snapshot.paramMap.get('id');
-    // this.product = this.productService.getProductById(this.productId);
+    this.productId = +this.route.snapshot.paramMap.get('id');
+    console.log("routes",this.productId)
+    this.product = this.productService.getProductIds(this.productId);
     
   }
 }
