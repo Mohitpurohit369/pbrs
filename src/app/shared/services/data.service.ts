@@ -9,16 +9,27 @@ export class DataService {
 
   constructor(private http: HttpClient ) { }
 
-  // apiUrl= 'http://sahosoftweb.com/api/Category/GetAll'
-  // apiUrl='https://pbrsmart.com/api/users/main-banner'; on karna hai
-  //apiUrl='https://pbrsmart.com/api/users/sing-up';//
-  // subBanner='https://pbrsmart.com/api/users/main-category-products';
 
-  apiUrl= '/assets/home_banner.json';
+   apiUrl='https://pbrsmart.com/api/users/main-banner'; 
+   subbanner='https://pbrsmart.com/api/users/offer'; 
+   maincatgery='https://pbrsmart.com/api/users/main-category/g';
+ producat="https://pbrsmart.com/api/users/sub-category/all"
+
+ // apiUrl= '/assets/home_banner.json';
  
   getproductdata(){
     return this. http.get<any[]>(this.apiUrl);
 
+  }
+  getsubbanner(){
+    return this. http.get<any[]>(this.subbanner);
+
+  }
+  getmaincatgery(){
+    return this.http.get<any>(this.maincatgery);
+  }
+  getproducat(){
+    return this.http.get<any>(this.producat);
   }
  
 
