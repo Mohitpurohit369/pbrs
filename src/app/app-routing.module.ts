@@ -20,10 +20,10 @@ const routes: Routes = [
       path: 'category',
       loadChildren: () => import('./component/category/category.module').then(m => m.CategoryModule)
     },
-    // {
-    //   path: 'login',
-    //   loadChildren: () => import('./component/category/auth/auth.module').then(m => m.AuthModule)
-    // }
+    {
+      path: 'product',
+      loadChildren: () => import('./component/product/product.module').then(m => m.ProductModule)
+    }
   ]
   }
 

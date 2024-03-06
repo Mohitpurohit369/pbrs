@@ -14,6 +14,7 @@ export class DataService {
    subbanner='https://pbrsmart.com/api/users/offer'; 
    maincatgery='https://pbrsmart.com/api/users/main-category/g';
  producat="https://pbrsmart.com/api/users/sub-category/all"
+ producattype="https://pbrsmart.com/api/users/type"
 
  // apiUrl= '/assets/home_banner.json';
  
@@ -23,6 +24,10 @@ export class DataService {
   }
   getsubbanner(){
     return this. http.get<any[]>(this.subbanner);
+
+  }
+  getproducttype(){
+    return this. http.get<any[]>(this.producattype);
 
   }
   getmaincatgery(){
